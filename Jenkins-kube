@@ -48,7 +48,7 @@ pipeline{
                   withCredentials([string(credentialsId: 'DOCKER_HUB_CREDENTIALS', variable: 'DOCKER_HUB_CREDENTIALS')]) {
                       sh "docker login -u trivenibyreddy -p ${DOCKER_HUB_CREDENTIALS}"
             }
-            sh 'docker push srinidockerhub87/spring-boot-mongo'
+            sh 'docker push trivenibyreddy/dev1'
         }
       }
         stage("Deploy To Kuberates Cluster"){
